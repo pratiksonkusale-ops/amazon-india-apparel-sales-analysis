@@ -8,7 +8,7 @@
 -- 1. row count matches the cleaned data
 
 select count(*) from amazon_sales;
--- expected- 120378
+-- expected- 128968
 
 -- 2. date range of the data
 SELECT MIN(date) AS first_date,
@@ -16,10 +16,10 @@ SELECT MIN(date) AS first_date,
 FROM amazon_sales;
 -- Expected 2022-03-31 to 2022-06-29
 
--- 3. no repeated order IDs(primary column)
-SELECT COUNT(*) - COUNT(DISTINCT order_id) AS repeated_order_ids
+-- 3. number of unique orders
+SELECT COUNT(DISTINCT order_id) AS unique_orders
 FROM amazon_sales;
--- Expected. 0
+-- Expected: 120378
 
 -- 4: total revenue vs total recorded amount
 SELECT SUM(amount)  AS recorded_amount,

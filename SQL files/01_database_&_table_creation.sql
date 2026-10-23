@@ -2,7 +2,7 @@
 -- TABLE CREATION -- 
 
 create table amazon_sales (
-order_id varchar primary key, 
+order_id varchar , 
 date DATE, 
 status varchar, 
 fulfilment VARCHAR, 

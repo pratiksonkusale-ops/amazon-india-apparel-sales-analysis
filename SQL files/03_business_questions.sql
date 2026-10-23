@@ -25,7 +25,7 @@ asc ;
 
 select category, count(status)
 from amazon_sales a where a.status = 'Cancelled' 
-group by category order by count(status) desc;4. 
+group by category order by count(status) desc;
 
 -- 4. How much value is lost to cancellations?
 
